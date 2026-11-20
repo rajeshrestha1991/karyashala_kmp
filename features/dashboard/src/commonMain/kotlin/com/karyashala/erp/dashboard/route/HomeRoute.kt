@@ -1,0 +1,16 @@
+package com.karyashala.erp.dashboard.route
+
+import kotlinx.serialization.Serializable
+
+@Serializable
+sealed interface HomeRoute {
+    @Serializable
+    data class ViewAllRoute(val json : String, val title : String): HomeRoute
+
+    @Serializable
+    data object NotificationRoute: HomeRoute
+
+    @Serializable
+    data object EditProfileRoute: HomeRoute
+
+}

@@ -1,0 +1,126 @@
+package com.karyashala.erp.components.date
+
+import com.karyashala.erp.date.BSPointer
+import com.karyashala.erp.date.DateConverter
+import com.karyashala.erp.date.Year
+import com.karyashala.erp.date.data.CalendarDate
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.atStartOfDayIn
+import kotlinx.datetime.number
+import kotlinx.serialization.Serializable
+import kotlin.time.ExperimentalTime
+
+@Serializable
+data class DateData(
+    val displayValueAD: String,
+    val displayValueBS: String,
+    val actualValue: Long
+) {
+    companion object {
+
+        // Create from formatted string
+        @OptIn(ExperimentalTime::class)
+        fun fromDisplayAD(
+            displayValue: String,
+            pattern: String = "yyyy-MM-dd",
+            timeZone: TimeZone = TimeZone.Companion.currentSystemDefault()
+        ): DateData {
+            val localDate = displayValue.parseDate(pattern)
+            val dateInBS = DateConverter.adToBs(
+                year = localDate.year,
+                month = localDate.month.number,
+                day = localDate.day
+            )
+            val displayValueBS = "${dateInBS.year}-${
+                dateInBS.month.toString().padStart(2, '0')
+            }-${dateInBS.day.toString().padStart(2, '0')}"
+
+            val millis = localDate.atStartOfDayIn(timeZone).toEpochMilliseconds()
+            return DateData(
+                displayValueAD = displayValue,
+                actualValue = millis,
+                displayValueBS = displayValueBS
+            )
+        }
+
+        @OptIn(ExperimentalTime::class)
+        fun fromDisplayBS(
+            displayValue: String,
+            pattern: String = "yyyy-MM-dd",
+            timeZone: TimeZone = TimeZone.Companion.currentSystemDefault()
+        ): DateData {
+            val localDate = displayValue.parseDate(pattern)
+            val dateInAD = DateConverter.bsToAd(
+                year = localDate.year,
+                month = localDate.month.number,
+                day = localDate.day
+            )
+            val displayValueAD = "${dateInAD.year}-${
+                dateInAD.month.toString().padStart(2, '0')
+            }-${dateInAD.day.toString().padStart(2, '0')}"
+
+            val millis = localDate.atStartOfDayIn(timeZone).toEpochMilliseconds()
+            return DateData(
+                displayValueAD = displayValueAD,
+                actualValue = millis,
+                displayValueBS = displayValue
+            )
+        }
+
+        fun getCalendarDateBS(
+            displayValue: String,
+            pattern: String = "yyyy-MM-dd"
+        ): CalendarDate? {
+            return try {
+                val localDate = displayValue.parseDate(pattern)
+                val page = BSPointer.getPageIndex(
+                    year = Year.ofValue(localDate.year),
+                    month = localDate.month.number
+                )
+                CalendarDate(localDate.year, localDate.month.number, localDate.day, page = page)
+            } catch (_: Exception) {
+                null
+            }
+        }
+
+        fun getCalendarDateAD(
+            displayValue: String,
+            pattern: String = "yyyy-MM-dd"
+        ): CalendarDate? {
+            return try {
+                val localDate = displayValue.parseDate(pattern)
+                val dateInBS = DateConverter.adToBs(
+                    year = localDate.year,
+                    month = localDate.month.number,
+                    day = localDate.day
+                )
+                getCalendarDateBS("${dateInBS.year}-${dateInBS.month}-${dateInBS.day}")
+            } catch (_: Exception) {
+                return null
+            }
+        }
+    }
+}
+
+private fun String.parseDate(pattern: String): LocalDate {
+    return when (pattern) {
+        "MM/dd/yyyy" -> {
+            val parts = this.split("/")
+            LocalDate(
+                year = parts[2].toInt(),
+                month = parts[0].toInt(),
+                day = parts[1].toInt()
+            )
+        }
+
+        else -> {
+            val parts = this.split("-")
+            LocalDate(
+                year = parts[0].toInt(),
+                month = parts[1].toInt(),
+                day = parts[2].toInt()
+            )
+        }
+    }
+}

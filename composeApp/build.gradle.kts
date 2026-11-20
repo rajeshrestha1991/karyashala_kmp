@@ -89,11 +89,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.gurkha.hr"
+    namespace = "com.karyashala.erp"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.gurkha.hr"
+        applicationId = "com.karyashala.erp"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -123,5 +123,10 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
+}
+
+compose.resources {
+    publicResClass = true
+    packageOfResClass = "com.karyashala.erp.generated.resources"
 }
 

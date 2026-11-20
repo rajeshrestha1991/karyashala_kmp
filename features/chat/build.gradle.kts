@@ -13,7 +13,7 @@ kotlin {
     // which platforms this KMP module supports.
     // See: https://kotlinlang.org/docs/multiplatform-discover-project.html#targets
     androidLibrary {
-        namespace = "com.gurkha.hr.chat_list"
+        namespace = "com.karyashala.erp.chat_list"
         compileSdk = 36
         minSdk = 24
 

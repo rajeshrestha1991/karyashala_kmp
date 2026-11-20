@@ -1,4 +1,4 @@
-rootProject.name = "GurkhaHR"
+rootProject.name = "KaryashalaERP"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

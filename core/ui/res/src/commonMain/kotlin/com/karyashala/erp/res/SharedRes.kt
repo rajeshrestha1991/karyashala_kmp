@@ -1,0 +1,602 @@
+package com.karyashala.erp.res
+
+import com.karyashala.erp.res.generated.resources.Poppins_Bold
+import com.karyashala.erp.res.generated.resources.Poppins_Italic
+import com.karyashala.erp.res.generated.resources.Poppins_Medium
+import com.karyashala.erp.res.generated.resources.Res
+import com.karyashala.erp.res.generated.resources.absent
+import com.karyashala.erp.res.generated.resources.absent_days
+import com.karyashala.erp.res.generated.resources.account
+import com.karyashala.erp.res.generated.resources.ad
+import com.karyashala.erp.res.generated.resources.add_notes
+import com.karyashala.erp.res.generated.resources.add_photos
+import com.karyashala.erp.res.generated.resources.address
+import com.karyashala.erp.res.generated.resources.all_leaves
+import com.karyashala.erp.res.generated.resources.allocated_leave
+import com.karyashala.erp.res.generated.resources.allow_permission
+import com.karyashala.erp.res.generated.resources.annual_leave
+import com.karyashala.erp.res.generated.resources.app_appearance
+import com.karyashala.erp.res.generated.resources.apply_days
+import com.karyashala.erp.res.generated.resources.approved
+import com.karyashala.erp.res.generated.resources.approver
+import com.karyashala.erp.res.generated.resources.are_you_sure
+import com.karyashala.erp.res.generated.resources.asset_name
+import com.karyashala.erp.res.generated.resources.assigned
+import com.karyashala.erp.res.generated.resources.assigned_assets
+import com.karyashala.erp.res.generated.resources.assigned_date
+import com.karyashala.erp.res.generated.resources.assignee
+import com.karyashala.erp.res.generated.resources.attendance
+import com.karyashala.erp.res.generated.resources.attendance_approved
+import com.karyashala.erp.res.generated.resources.attendance_cancelled
+import com.karyashala.erp.res.generated.resources.attendance_pending
+import com.karyashala.erp.res.generated.resources.attendance_req_accepted
+import com.karyashala.erp.res.generated.resources.attendance_req_rejected
+import com.karyashala.erp.res.generated.resources.attendance_request
+import com.karyashala.erp.res.generated.resources.attendance_request_form
+import com.karyashala.erp.res.generated.resources.attendance_summary
+import com.karyashala.erp.res.generated.resources.auth_using_biometric
+import com.karyashala.erp.res.generated.resources.bachelor
+import com.karyashala.erp.res.generated.resources.biometric
+import com.karyashala.erp.res.generated.resources.blood_group
+import com.karyashala.erp.res.generated.resources.branch
+import com.karyashala.erp.res.generated.resources.bs
+import com.karyashala.erp.res.generated.resources.call
+import com.karyashala.erp.res.generated.resources.camera
+import com.karyashala.erp.res.generated.resources.camera_permission_denied
+import com.karyashala.erp.res.generated.resources.cancel
+import com.karyashala.erp.res.generated.resources.cancelled
+import com.karyashala.erp.res.generated.resources.change_password
+import com.karyashala.erp.res.generated.resources.chat
+import com.karyashala.erp.res.generated.resources.check_in
+import com.karyashala.erp.res.generated.resources.check_out
+import com.karyashala.erp.res.generated.resources.citizenship_back
+import com.karyashala.erp.res.generated.resources.citizenship_front
+import com.karyashala.erp.res.generated.resources.clockIn
+import com.karyashala.erp.res.generated.resources.clockOut
+import com.karyashala.erp.res.generated.resources.clock_in_time
+import com.karyashala.erp.res.generated.resources.clock_out_time
+import com.karyashala.erp.res.generated.resources.coming_soon
+import com.karyashala.erp.res.generated.resources.company_assets
+import com.karyashala.erp.res.generated.resources.confirm
+import com.karyashala.erp.res.generated.resources.confirm_password
+import com.karyashala.erp.res.generated.resources.contact_info
+import com.karyashala.erp.res.generated.resources.copy
+import com.karyashala.erp.res.generated.resources.current_password
+import com.karyashala.erp.res.generated.resources.dark
+import com.karyashala.erp.res.generated.resources.date
+import com.karyashala.erp.res.generated.resources.date_of_birth
+import com.karyashala.erp.res.generated.resources.delete
+import com.karyashala.erp.res.generated.resources.delete_confirmation
+import com.karyashala.erp.res.generated.resources.description
+import com.karyashala.erp.res.generated.resources.designation
+import com.karyashala.erp.res.generated.resources.do_you_really_want_to_logout
+import com.karyashala.erp.res.generated.resources.document
+import com.karyashala.erp.res.generated.resources.early_out
+import com.karyashala.erp.res.generated.resources.edit
+import com.karyashala.erp.res.generated.resources.edit_notes
+import com.karyashala.erp.res.generated.resources.edit_profile
+import com.karyashala.erp.res.generated.resources.email
+import com.karyashala.erp.res.generated.resources.emergency_contact
+import com.karyashala.erp.res.generated.resources.end_date
+import com.karyashala.erp.res.generated.resources.end_time
+import com.karyashala.erp.res.generated.resources.english
+import com.karyashala.erp.res.generated.resources.enter_description
+import com.karyashala.erp.res.generated.resources.enter_reason
+import com.karyashala.erp.res.generated.resources.enter_title
+import com.karyashala.erp.res.generated.resources.enter_your_email
+import com.karyashala.erp.res.generated.resources.enter_your_password
+import com.karyashala.erp.res.generated.resources.enter_your_username
+import com.karyashala.erp.res.generated.resources.event
+import com.karyashala.erp.res.generated.resources.experience_document
+import com.karyashala.erp.res.generated.resources.extra_image_one
+import com.karyashala.erp.res.generated.resources.extra_image_two
+import com.karyashala.erp.res.generated.resources.faq
+import com.karyashala.erp.res.generated.resources.fix_now
+import com.karyashala.erp.res.generated.resources.from_date
+import com.karyashala.erp.res.generated.resources.full_day
+import com.karyashala.erp.res.generated.resources.gallery
+import com.karyashala.erp.res.generated.resources.gallery_permission_denied
+import com.karyashala.erp.res.generated.resources.gender
+import com.karyashala.erp.res.generated.resources.general
+import com.karyashala.erp.res.generated.resources.getStarted
+import com.karyashala.erp.res.generated.resources.go_home
+import com.karyashala.erp.res.generated.resources.go_to_setting
+import com.karyashala.erp.res.generated.resources.guardian_information
+import com.karyashala.erp.res.generated.resources.guardian_name
+import com.karyashala.erp.res.generated.resources.guardian_phone
+import com.karyashala.erp.res.generated.resources.half_afternoon
+import com.karyashala.erp.res.generated.resources.half_morning
+import com.karyashala.erp.res.generated.resources.history
+import com.karyashala.erp.res.generated.resources.holiday
+import com.karyashala.erp.res.generated.resources.holidays
+import com.karyashala.erp.res.generated.resources.home
+import com.karyashala.erp.res.generated.resources.`in`
+import com.karyashala.erp.res.generated.resources.invalid_email_address
+import com.karyashala.erp.res.generated.resources.invalid_password_digit
+import com.karyashala.erp.res.generated.resources.invalid_password_length
+import com.karyashala.erp.res.generated.resources.invalid_password_lowercase
+import com.karyashala.erp.res.generated.resources.invalid_password_special_char
+import com.karyashala.erp.res.generated.resources.invalid_password_uppercase
+import com.karyashala.erp.res.generated.resources.is_event
+import com.karyashala.erp.res.generated.resources.label_contract
+import com.karyashala.erp.res.generated.resources.label_designation
+import com.karyashala.erp.res.generated.resources.label_employee_type
+import com.karyashala.erp.res.generated.resources.label_joined_date
+import com.karyashala.erp.res.generated.resources.label_level
+import com.karyashala.erp.res.generated.resources.label_pan_number
+import com.karyashala.erp.res.generated.resources.label_permanent
+import com.karyashala.erp.res.generated.resources.label_pf_number
+import com.karyashala.erp.res.generated.resources.label_probation
+import com.karyashala.erp.res.generated.resources.label_user_id
+import com.karyashala.erp.res.generated.resources.language
+import com.karyashala.erp.res.generated.resources.late_in
+import com.karyashala.erp.res.generated.resources.leave
+import com.karyashala.erp.res.generated.resources.leave_approved
+import com.karyashala.erp.res.generated.resources.leave_balance
+import com.karyashala.erp.res.generated.resources.leave_cancelled
+import com.karyashala.erp.res.generated.resources.leave_duration
+import com.karyashala.erp.res.generated.resources.leave_pending
+import com.karyashala.erp.res.generated.resources.leave_processing
+import com.karyashala.erp.res.generated.resources.leave_req_accepted
+import com.karyashala.erp.res.generated.resources.leave_req_rejected
+import com.karyashala.erp.res.generated.resources.leave_request
+import com.karyashala.erp.res.generated.resources.leave_request_form
+import com.karyashala.erp.res.generated.resources.leave_summary
+import com.karyashala.erp.res.generated.resources.leave_taken
+import com.karyashala.erp.res.generated.resources.leave_type
+import com.karyashala.erp.res.generated.resources.leave_type_name
+import com.karyashala.erp.res.generated.resources.light
+import com.karyashala.erp.res.generated.resources.location
+import com.karyashala.erp.res.generated.resources.log_out
+import com.karyashala.erp.res.generated.resources.login
+import com.karyashala.erp.res.generated.resources.login_verification
+import com.karyashala.erp.res.generated.resources.marital_status
+import com.karyashala.erp.res.generated.resources.master
+import com.karyashala.erp.res.generated.resources.maternity_leave
+import com.karyashala.erp.res.generated.resources.missed_attendance
+import com.karyashala.erp.res.generated.resources.month
+import com.karyashala.erp.res.generated.resources.monthly_attendance
+import com.karyashala.erp.res.generated.resources.monthly_attendance_report
+import com.karyashala.erp.res.generated.resources.months
+import com.karyashala.erp.res.generated.resources.mourning_leave
+import com.karyashala.erp.res.generated.resources.my_attendance
+import com.karyashala.erp.res.generated.resources.national_id
+import com.karyashala.erp.res.generated.resources.nationality
+import com.karyashala.erp.res.generated.resources.nepali
+import com.karyashala.erp.res.generated.resources.new_password
+import com.karyashala.erp.res.generated.resources.next
+import com.karyashala.erp.res.generated.resources.no
+import com.karyashala.erp.res.generated.resources.no_assets_available
+import com.karyashala.erp.res.generated.resources.no_data_found
+import com.karyashala.erp.res.generated.resources.note
+import com.karyashala.erp.res.generated.resources.notes
+import com.karyashala.erp.res.generated.resources.notification
+import com.karyashala.erp.res.generated.resources.notification_action
+import com.karyashala.erp.res.generated.resources.notifications
+import com.karyashala.erp.res.generated.resources.numbers
+import com.karyashala.erp.res.generated.resources.ok
+import com.karyashala.erp.res.generated.resources.on_time
+import com.karyashala.erp.res.generated.resources.one
+import com.karyashala.erp.res.generated.resources.others
+import com.karyashala.erp.res.generated.resources.out
+import com.karyashala.erp.res.generated.resources.outline_logout_24
+import com.karyashala.erp.res.generated.resources.password
+import com.karyashala.erp.res.generated.resources.password_does_not_match
+import com.karyashala.erp.res.generated.resources.pending
+import com.karyashala.erp.res.generated.resources.personal
+import com.karyashala.erp.res.generated.resources.personal_details
+import com.karyashala.erp.res.generated.resources.personal_info
+import com.karyashala.erp.res.generated.resources.phone
+import com.karyashala.erp.res.generated.resources.photos
+import com.karyashala.erp.res.generated.resources.please_reset_biometric
+import com.karyashala.erp.res.generated.resources.plus_two_image
+import com.karyashala.erp.res.generated.resources.present
+import com.karyashala.erp.res.generated.resources.privacy_policy
+import com.karyashala.erp.res.generated.resources.profile
+import com.karyashala.erp.res.generated.resources.profile_image
+import com.karyashala.erp.res.generated.resources.profile_incomplete
+import com.karyashala.erp.res.generated.resources.reason
+import com.karyashala.erp.res.generated.resources.remaining_leave
+import com.karyashala.erp.res.generated.resources.remarks
+import com.karyashala.erp.res.generated.resources.report
+import com.karyashala.erp.res.generated.resources.request
+import com.karyashala.erp.res.generated.resources.required
+import com.karyashala.erp.res.generated.resources.reset_biometric
+import com.karyashala.erp.res.generated.resources.response
+import com.karyashala.erp.res.generated.resources.search_users
+import com.karyashala.erp.res.generated.resources.select_assignee
+import com.karyashala.erp.res.generated.resources.select_date
+import com.karyashala.erp.res.generated.resources.select_end_date
+import com.karyashala.erp.res.generated.resources.select_leave_duration
+import com.karyashala.erp.res.generated.resources.select_leave_type
+import com.karyashala.erp.res.generated.resources.select_start_date
+import com.karyashala.erp.res.generated.resources.setting
+import com.karyashala.erp.res.generated.resources.share
+import com.karyashala.erp.res.generated.resources.sick_leave
+import com.karyashala.erp.res.generated.resources.skip
+import com.karyashala.erp.res.generated.resources.slc_marksheet
+import com.karyashala.erp.res.generated.resources.start_date
+import com.karyashala.erp.res.generated.resources.start_time
+import com.karyashala.erp.res.generated.resources.status
+import com.karyashala.erp.res.generated.resources.submit
+import com.karyashala.erp.res.generated.resources.support
+import com.karyashala.erp.res.generated.resources.swipe_to_check_in
+import com.karyashala.erp.res.generated.resources.swipe_to_check_out
+import com.karyashala.erp.res.generated.resources.system
+import com.karyashala.erp.res.generated.resources.system_default
+import com.karyashala.erp.res.generated.resources.terms_and_services
+import com.karyashala.erp.res.generated.resources.time_and_attendance
+import com.karyashala.erp.res.generated.resources.title
+import com.karyashala.erp.res.generated.resources.to_access_all_photos
+import com.karyashala.erp.res.generated.resources.to_date
+import com.karyashala.erp.res.generated.resources.today
+import com.karyashala.erp.res.generated.resources.total_absent_days
+import com.karyashala.erp.res.generated.resources.total_days
+import com.karyashala.erp.res.generated.resources.total_leave
+import com.karyashala.erp.res.generated.resources.total_leave_taken
+import com.karyashala.erp.res.generated.resources.total_present_days
+import com.karyashala.erp.res.generated.resources.total_worked_days
+import com.karyashala.erp.res.generated.resources.total_working_days
+import com.karyashala.erp.res.generated.resources.two
+import com.karyashala.erp.res.generated.resources.type_here
+import com.karyashala.erp.res.generated.resources.typing
+import com.karyashala.erp.res.generated.resources.unknown_error_occurred
+import com.karyashala.erp.res.generated.resources.upcoming_birthday
+import com.karyashala.erp.res.generated.resources.upcoming_events
+import com.karyashala.erp.res.generated.resources.upload_bachelor
+import com.karyashala.erp.res.generated.resources.upload_citizenship_back
+import com.karyashala.erp.res.generated.resources.upload_citizenship_front
+import com.karyashala.erp.res.generated.resources.upload_experience_document
+import com.karyashala.erp.res.generated.resources.upload_extra_image_one
+import com.karyashala.erp.res.generated.resources.upload_extra_image_two
+import com.karyashala.erp.res.generated.resources.upload_master
+import com.karyashala.erp.res.generated.resources.upload_national_id
+import com.karyashala.erp.res.generated.resources.upload_plus_two_image
+import com.karyashala.erp.res.generated.resources.upload_profile_image
+import com.karyashala.erp.res.generated.resources.upload_slc_marksheet
+import com.karyashala.erp.res.generated.resources.userId
+import com.karyashala.erp.res.generated.resources.username
+import com.karyashala.erp.res.generated.resources.view_all
+import com.karyashala.erp.res.generated.resources.weeks_days
+import com.karyashala.erp.res.generated.resources.welcome
+import com.karyashala.erp.res.generated.resources.work_anniversaries
+import com.karyashala.erp.res.generated.resources.working_days
+import com.karyashala.erp.res.generated.resources.year
+import com.karyashala.erp.res.generated.resources.yes
+
+
+object SharedRes {
+
+    fun getRes(path: String): String {
+        return Res.getUri(path)
+    }
+
+    object Fonts {
+        val poppinsMedium = Res.font.Poppins_Medium
+        val poppinsBold = Res.font.Poppins_Bold
+        val poppinsItalic = Res.font.Poppins_Italic
+    }
+
+    object Icons {
+        val logout = Res.drawable.outline_logout_24
+    }
+
+    object Arrays {
+        val months = Res.array.months
+        val weeksDays = Res.array.weeks_days
+        val numbers = Res.array.numbers
+    }
+
+    object Strings {
+        val welcome = Res.string.welcome
+        val required = Res.string.required
+        val next = Res.string.next
+        val skip = Res.string.skip
+        val getStarted = Res.string.getStarted
+        val home = Res.string.home
+        val my_attendance = Res.string.my_attendance
+        val profile = Res.string.profile
+        val leave = Res.string.leave
+        val report = Res.string.report
+        val request = Res.string.request
+        val view_all = Res.string.view_all
+        val attendance = Res.string.attendance
+        val upcoming_birthday = Res.string.upcoming_birthday
+        val work_anniversaries = Res.string.work_anniversaries
+        val all_leaves = Res.string.all_leaves
+        val leave_balance = Res.string.leave_balance
+        val leave_approved = Res.string.leave_approved
+        val leave_pending = Res.string.leave_pending
+        val leave_cancelled = Res.string.leave_cancelled
+        val pending = Res.string.pending
+        val approved = Res.string.approved
+        val cancelled = Res.string.cancelled
+        val leave_request_form = Res.string.leave_request_form
+        val startDate = Res.string.start_date
+        val selectStartDate = Res.string.select_start_date
+        val endDate = Res.string.end_date
+        val selectEndDate = Res.string.select_end_date
+        val leaveType = Res.string.leave_type
+        val selectLeaveType = Res.string.select_leave_type
+        val reason = Res.string.reason
+        val enterReason = Res.string.enter_reason
+
+        val fullDay = Res.string.full_day
+        val halfMorning = Res.string.half_morning
+        val halfAfternoon = Res.string.half_afternoon
+
+        val leave_duration = Res.string.leave_duration
+        val select_leave_duration = Res.string.select_leave_duration
+        val sickLeave = Res.string.sick_leave
+        val annualLeave = Res.string.annual_leave
+        val maternityLeave = Res.string.maternity_leave
+        val mourningLeave = Res.string.mourning_leave
+
+        val uploadProfileImage = Res.string.upload_profile_image
+        val uploadCitizenshipFront = Res.string.upload_citizenship_front
+        val uploadCitizenshipBack = Res.string.upload_citizenship_back
+        val uploadNationalId = Res.string.upload_national_id
+        val uploadSlcMarksheet = Res.string.upload_slc_marksheet
+        val uploadPlusTwoImage = Res.string.upload_plus_two_image
+        val uploadBachelor = Res.string.upload_bachelor
+        val uploadMaster = Res.string.upload_master
+        val uploadExperienceDocument = Res.string.upload_experience_document
+
+        val editProfile = Res.string.edit_profile
+        val personal = Res.string.personal
+        val others = Res.string.others
+        val bloodGroup = Res.string.blood_group
+
+        val profileImage = Res.string.profile_image
+        val citizenshipFront = Res.string.citizenship_front
+        val citizenshipBack = Res.string.citizenship_back
+        val nationalId = Res.string.national_id
+        val slcMarksheet = Res.string.slc_marksheet
+        val plusTwoImage = Res.string.plus_two_image
+        val bachelor = Res.string.bachelor
+        val master = Res.string.master
+        val experienceDocument = Res.string.experience_document
+        val attendanceRequest = Res.string.attendance_request
+        val leaveRequest = Res.string.leave_request
+
+        val leaveSummary = Res.string.leave_summary
+        val leaveTypeName = Res.string.leave_type_name
+        val leaveTaken = Res.string.leave_taken
+        val remainingLeave = Res.string.remaining_leave
+        val totalDays = Res.string.total_days
+
+        val assignedAssets = Res.string.assigned_assets
+        val assetName = Res.string.asset_name
+        val description = Res.string.description
+        val assignedDate = Res.string.assigned_date
+
+        val clockIn = Res.string.clockIn
+        val clockOut = Res.string.clockOut
+        val status = Res.string.status
+        val noAssetsAvailable = Res.string.no_assets_available
+        val monthlyAttendance = Res.string.monthly_attendance
+        val monthlyAttendanceReport = Res.string.monthly_attendance_report
+        val attendanceSummary = Res.string.attendance_summary
+
+        val holidays = Res.string.holidays
+        val totalWorkingDays = Res.string.total_working_days
+        val totalWorkedDays = Res.string.total_worked_days
+        val totalLeaveTaken = Res.string.total_leave_taken
+        val totalPresentDays = Res.string.total_present_days
+        val totalAbsentDays = Res.string.total_absent_days
+
+
+        val year = Res.string.year
+        val remarks = Res.string.remarks
+        val assigned = Res.string.assigned
+        val response = Res.string.response
+
+
+        val date = Res.string.date
+        val approver = Res.string.approver
+        val applyDays = Res.string.apply_days
+        val leave_type = Res.string.leave_type
+
+        val missed_attendance = Res.string.missed_attendance
+        val attendance_approved = Res.string.attendance_approved
+        val attendance_cancelled = Res.string.attendance_cancelled
+        val attendance_pending = Res.string.attendance_pending
+
+        val no_data_found = Res.string.no_data_found
+
+        val select_date = Res.string.select_date
+        val clock_in_time = Res.string.clock_in_time
+        val clock_out_time = Res.string.clock_out_time
+
+        val attendance_request_form = Res.string.attendance_request_form
+
+        val notes = Res.string.notes
+        val add_notes = Res.string.add_notes
+        val edit_notes = Res.string.edit_notes
+
+        val is_event = Res.string.is_event
+        val title = Res.string.title
+        val enter_title = Res.string.enter_title
+        val enter_description = Res.string.enter_description
+
+        val note = Res.string.note
+        val event = Res.string.event
+        val one = Res.string.one
+        val two = Res.string.two
+
+        val start_time = Res.string.start_time
+        val end_time = Res.string.end_time
+        val location = Res.string.location
+
+        val edit = Res.string.edit
+
+        val delete = Res.string.delete
+
+        val delete_confirmation = Res.string.delete_confirmation
+
+        val upcoming_events = Res.string.upcoming_events
+
+        val notification_des = Res.string.leave_req_accepted
+
+        val notification = Res.string.notification
+        val leave_req_accepted = Res.string.leave_req_accepted
+        val leave_req_rejected = Res.string.leave_req_rejected
+        val attendance_req_accepted = Res.string.attendance_req_accepted
+        val attendance_req_rejected = Res.string.attendance_req_rejected
+
+        val invalidEmailAddress = Res.string.invalid_email_address
+        val email = Res.string.email
+        val enterYourEmail = Res.string.enter_your_email
+        val login = Res.string.login
+        val username = Res.string.username
+        val enterYourUsername = Res.string.enter_your_username
+        val password = Res.string.password
+        val enterYourPassword = Res.string.enter_your_password
+        val invalidPasswordLength = Res.string.invalid_password_length
+        val invalidPasswordUppercase = Res.string.invalid_password_uppercase
+        val invalidPasswordLowercase = Res.string.invalid_password_lowercase
+        val invalidPasswordDigit = Res.string.invalid_password_digit
+        val invalidPasswordSpecialChar = Res.string.invalid_password_special_char
+        val password_does_not_match = Res.string.password_does_not_match
+        val unknown_error_occurred = Res.string.unknown_error_occurred
+        val change_password = Res.string.change_password
+        val confirm_password = Res.string.confirm_password
+        val new_password = Res.string.new_password
+        val current_password = Res.string.current_password
+        val fromDate = Res.string.from_date
+        val toDate = Res.string.to_date
+        val month = Res.string.month
+
+        val labelDesignation = Res.string.label_designation
+        val labelLevel = Res.string.label_level
+        val labelEmployeeType = Res.string.label_employee_type
+        val labelPanNumber = Res.string.label_pan_number
+        val labelPfNumber = Res.string.label_pf_number
+        val labelUserId = Res.string.label_user_id
+        val labelJoinedDate = Res.string.label_joined_date
+        val labelContract = Res.string.label_contract
+        val labelProbation = Res.string.label_probation
+        val labelPermanent = Res.string.label_permanent
+
+
+        val setting = Res.string.setting
+        val appAppearance = Res.string.app_appearance
+        val system_default = Res.string.system_default
+        val confirm = Res.string.confirm
+        val language = Res.string.language
+        val allocated_leave = Res.string.allocated_leave
+        val time_and_attendance = Res.string.time_and_attendance
+        val document = Res.string.document
+        val company_assets = Res.string.company_assets
+        val history = Res.string.history
+        val terms_and_services = Res.string.terms_and_services
+        val faq = Res.string.faq
+        val privacy_policy = Res.string.privacy_policy
+        val support = Res.string.support
+
+        val personal_info = Res.string.personal_info
+        val phone = Res.string.phone
+        val address = Res.string.address
+        val contact_info = Res.string.contact_info
+        val date_of_birth = Res.string.date_of_birth
+        val gender = Res.string.gender
+        val nationality = Res.string.nationality
+        val marital_status = Res.string.marital_status
+        val guardian_information = Res.string.guardian_information
+        val guardian_name = Res.string.guardian_name
+        val guardian_phone = Res.string.guardian_phone
+        val personal_details = Res.string.personal_details
+        val emergency_contact = Res.string.emergency_contact
+        val general = Res.string.general
+        val account = Res.string.account
+        val cancel = Res.string.cancel
+        val submit = Res.string.submit
+
+        val assignee = Res.string.assignee
+        val select_assignee = Res.string.select_assignee
+
+        val leave_processing = Res.string.leave_processing
+        val ok = Res.string.ok
+
+
+        val log_out = Res.string.log_out
+        val no = Res.string.no
+        val yes = Res.string.yes
+        val are_you_sure = Res.string.are_you_sure
+        val do_you_really_want_to_logout = Res.string.do_you_really_want_to_logout
+        val chat = Res.string.chat
+        val searchUsers = Res.string.search_users
+        val type_here = Res.string.type_here
+        val typing = Res.string.typing
+        val ad = Res.string.ad
+        val bs = Res.string.bs
+        val today = Res.string.today
+
+        val holiday = Res.string.holiday
+        val late_in = Res.string.late_in
+        val early_out = Res.string.early_out
+        val present = Res.string.present
+        val absent = Res.string.absent
+
+        val checkIn = Res.string.check_in
+        val checkOut = Res.string.check_out
+        val onTime = Res.string.on_time
+        val goHome = Res.string.go_home
+        val totalLeave = Res.string.total_leave
+        val workingDays = Res.string.working_days
+
+        val swipeToCheckIn = Res.string.swipe_to_check_in
+        val swipeToCheckOut = Res.string.swipe_to_check_out
+
+        val camera = Res.string.camera
+        val gallery = Res.string.gallery
+        val notifications = Res.string.notifications
+        val dark = Res.string.dark
+        val light = Res.string.light
+        val system = Res.string.system
+        val biometric = Res.string.biometric
+
+        val english = Res.string.english
+        val nepali = Res.string.nepali
+
+        val branch = Res.string.branch
+
+        val userId = Res.string.userId
+
+        val designation = Res.string.designation
+        val fix_now = Res.string.fix_now
+        val profile_incomplete = Res.string.profile_incomplete
+
+        val go_to_setting = Res.string.go_to_setting
+        val allow_permission = Res.string.allow_permission
+        val addPhotos = Res.string.add_photos
+        val photos = Res.string.photos
+        val toAccessAllPhotos = Res.string.to_access_all_photos
+        val cameraPermissionDenied = Res.string.camera_permission_denied
+        val galleryPermissionDenied = Res.string.gallery_permission_denied
+        val copy = Res.string.copy
+        val share = Res.string.share
+
+        val extra_image_one = Res.string.extra_image_one
+        val extra_image_two = Res.string.extra_image_two
+
+        val upload_extra_image_one = Res.string.upload_extra_image_one
+        val upload_extra_image_two = Res.string.upload_extra_image_two
+        val notification_action = Res.string.notification_action
+        val login_verification = Res.string.login_verification
+        val auth_using_biometric = Res.string.auth_using_biometric
+        val call = Res.string.call
+
+        val please_reset_biometric = Res.string.please_reset_biometric
+        val reset_biometric = Res.string.reset_biometric
+
+        val absent_days = Res.string.absent_days
+        val present_days = Res.string.present
+
+        val coming_soon = Res.string.coming_soon
+
+        val inText = Res.string.`in`
+        val outText = Res.string.out
+
+    }
+}

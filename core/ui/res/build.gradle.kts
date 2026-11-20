@@ -12,7 +12,7 @@ kotlin {
     // which platforms this KMP module supports.
     // See: https://kotlinlang.org/docs/multiplatform-discover-project.html#targets
     androidLibrary {
-        namespace = "com.gurkha.hr.res"
+        namespace = "com.karyashala.erp.res"
         compileSdk = 36
         minSdk = 24
 
@@ -106,4 +106,9 @@ kotlin {
         }
     }
 
+}
+
+compose.resources {
+    publicResClass = true
+    packageOfResClass = "com.karyashala.erp.res.generated.resources"
 }

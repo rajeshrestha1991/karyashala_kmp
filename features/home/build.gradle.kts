@@ -12,7 +12,7 @@ kotlin {
     // which platforms this KMP module supports.
     // See: https://kotlinlang.org/docs/multiplatform-discover-project.html#targets
     androidLibrary {
-        namespace = "com.gurkha.hr.home"
+        namespace = "com.karyashala.erp.home"
         compileSdk = 36
         minSdk = 24
 

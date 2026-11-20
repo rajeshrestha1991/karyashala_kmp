@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "820563193977",
-    "project_id": "gurkha-hr",
-    "storage_bucket": "gurkha-hr.firebasestorage.app"
+    "project_number": "57720861127",
+    "project_id": "karyashalaerp-85072",
+    "storage_bucket": "karyashalaerp-85072.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:820563193977:android:d44f9639f9e55c0f70e4a8",
+        "mobilesdk_app_id": "1:57720861127:android:f8fc21d01981271d0629e2",
         "android_client_info": {
-          "package_name": "com.gurkha.hr"
+          "package_name": "com.karyashala.erp"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDkhFv76-7OC5V28dncu6GLC-bZjNm1B0U"
+          "current_key": "AIzaSyDZeupw40bHxM-D1fWqadFoowVIIUiTkX8"
         }
       ],
       "services": {

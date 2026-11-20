@@ -1,0 +1,49 @@
+package com.karyashala.erp.domain.attendance.attendanceReport.repository
+
+import com.karyashala.erp.networkhelper.ERPResult
+import com.karyashala.model.attendance.attendanceCountReport.AttendanceCountReportResponseDto
+import com.karyashala.model.attendance.attendanceReport.AttendanceResponseDto
+import com.karyashala.model.attendance.attendanceRequest.AttendanceRequestResponseDto
+import com.karyashala.model.attendance.attendanceStatus.AttendanceStatusResponseDTO
+import com.karyashala.model.attendance.attendanceSummary.AttendanceSummaryResponseDto
+import com.karyashala.model.attendance.doAttendance.DoAttendanceResponseDto
+import com.karyashala.model.network.DataError
+
+interface AttendanceRemoteRepository {
+    suspend fun fetchAttendance(
+        dateFrom: String? = null,
+        toDate: String? = null,
+        attendanceStatus: String? = null,
+        employeeId: Int? = null
+    ): ERPResult<AttendanceResponseDto, DataError>
+
+    suspend fun fetchAttendanceStatus(
+        attendanceStatus: String,
+        employeeName: String,
+        isSelf: String,
+        fromDate: String,
+        toDate: String
+    ): ERPResult<AttendanceStatusResponseDTO, DataError>
+
+    suspend fun requestAttendance(
+        assigneeId : Int,
+        clockInTime : String?,
+        clockOutTime : String?,
+        date : String,
+        remarks : String
+    ): ERPResult<AttendanceRequestResponseDto, DataError>
+
+    suspend fun fetchAttendanceSummary(): ERPResult<AttendanceSummaryResponseDto, DataError>
+
+    suspend fun doAttendance(
+        employeeId: Int,
+        imageName: String,
+        forDate: String
+    ): ERPResult<DoAttendanceResponseDto, DataError>
+
+    suspend fun attendanceCountReportFetch(
+        employeeId: Int,
+        toDate: String,
+        fromDate: String
+    ): ERPResult<AttendanceCountReportResponseDto, DataError>
+}

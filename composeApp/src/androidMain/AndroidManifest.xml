@@ -19,7 +19,7 @@
         android:maxSdkVersion="32" />
 
     <application
-        android:name=".GurkhaApp"
+        android:name=".KaryashalaApp"
         android:allowBackup="false"
         android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher"
